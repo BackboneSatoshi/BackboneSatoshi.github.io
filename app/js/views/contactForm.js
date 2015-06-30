@@ -29,5 +29,8 @@ SPA.Views.ContactForm = Marionette.ItemView.extend({
       tel: this.ui.telInput.val(),
       email: this.ui.emailInput.val()
     });
+  },
+  onDestroy: function() {
+    console.log("ContactFormビューを破棄");
   }
 });

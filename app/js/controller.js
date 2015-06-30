@@ -3,17 +3,22 @@ SPA.Controller = Marionette.Controller.extend({
     this._router = options.router;
     this._contacts = options.contacts;
 
-    this._contacts.fetch();
+    // localStorageがからモデルを取得する場合はコメントを削除
+    // localStorageのモデルを削除する時はlocalStorage.clear();を
+    //　コソール画面で実行する
+    //this._contacts.fetch();
 
+    /*
     if (this._contacts.isEmpty()) {
       this._createSampleData();
-    }
-    console.log("controller initialize")
+    }*/
+    this._createSampleData();
   },
 
   showContacts: function() { 
-  console.log("calling show contacts ");
+    // レイアウトビュー
     var layoutView = new SPA.Views.LayoutView();
+
     var headerView = new SPA.Views.HeaderView();
     var contactsView = new SPA.Views.Contacts({
       collection: this._contacts
@@ -28,7 +33,9 @@ SPA.Controller = Marionette.Controller.extend({
       this.editContact(contactView.model.id);
     });
 
+    // まずはレイアウトビューを先に表示させる
     SPA.mainRegion.show(layoutView); 
+    // リージョンを別のビューで埋める
     layoutView.getRegion('header').show(headerView);
     layoutView.getRegion('content').show(contactsView);
 
@@ -38,10 +45,14 @@ SPA.Controller = Marionette.Controller.extend({
   },
 
   newContact: function() {
+    var layoutView = new SPA.Views.LayoutView();
+
+    var headerView = new SPA.Views.HeaderView();
+
     var newContactForm = new SPA.Views.ContactForm({
       model: new SPA.Models.Contact()
     });
-
+    // イベントリスニング
     this.listenTo(newContactForm, 'form:submitted', function(attrs) {
       attrs.avatar = _.random(1, 15) + '.jpg';
       this._contacts.create(attrs);
@@ -50,28 +61,41 @@ SPA.Controller = Marionette.Controller.extend({
 
     this.listenTo(newContactForm, 'form:canceled', this.showContacts);
 
-    SPA.mainRegion.show(newContactForm);
+    // まずはレイスとビューを先に表示させる
+    SPA.mainRegion.show(layoutView);
+　　// リージョンを別のビューで埋める
+   layoutView.getRegion('header').show(headerView);
+   layoutView.getRegion('content').show(newContactForm);
 
     this._router.navigate('contacts/new');
   },
 
   editContact: function(id) {
-    var contact = this._contacts.get(id),
-        editContactForm;
+    var layoutView = new SPA.Views.LayoutView();
+
+    var headerView = new SPA.Views.HeaderView();
+
+
+    var contact = this._contacts.get(id);
+    var editContactForm;
 
     if (contact) {
       editContactForm = new SPA.Views.ContactForm({
           model: contact
       });
-
+      // イベントリスニング
       this.listenTo(editContactForm, 'form:submitted', function(attrs) {
         contact.save(attrs);
         this.showContacts();
       });
-
+      // イベントリスニング
       this.listenTo(editContactForm, 'form:canceled', this.showContacts);
 
-      SPA.mainRegion.show(editContactForm);
+      // まずはレイアウトビューを表示させる
+      SPA.mainRegion.show(layoutView);
+      // レイアウトビューのリージョンに個別のビューを表示させる
+      layoutView.getRegion('header').show(headerView);
+   　　layoutView.getRegion('content').show(editContactForm);
 
       this._router.navigate('contacts/edit/' + id);
     } else {
