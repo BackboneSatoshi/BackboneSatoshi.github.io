@@ -24,14 +24,15 @@
 }
 
 .media-object {
-  width: 128px;
-  height: 128px;
-  border-radius: 5px;
+  width: 140px;
+  height: 140px;
 }
 
 .media .thumbnail {
-  display: inline-block;
+  display: block;
   margin-bottom: 0;
+  margin-left: 7px;
+  border: none;
 }
 
 .media-list {
