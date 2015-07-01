@@ -2,6 +2,8 @@ SPA.Controller = Marionette.Controller.extend({
   initialize: function(options) {
     this._router = options.router;
     this._contacts = options.contacts;
+    this._proxy = options.proxy;
+    console.log(this._proxy);
 
     // localStorageがからモデルを取得する場合はコメントを削除
     // localStorageのモデルを削除する時はlocalStorage.clear();を
@@ -18,10 +20,14 @@ SPA.Controller = Marionette.Controller.extend({
   showContacts: function() { 
     // レイアウトビュー
     var layoutView = new SPA.Views.LayoutView();
-
+    // ヘッダービュー
     var headerView = new SPA.Views.HeaderView();
     var contactsView = new SPA.Views.Contacts({
-      collection: this._contacts
+      collection: this._proxy
+    });
+    // ページネーションビュー
+    var paginationView = new SPA.Views.paginationView({
+      collection: this._proxy
     });
 
     // イベントリスニング
@@ -38,9 +44,9 @@ SPA.Controller = Marionette.Controller.extend({
     // リージョンを別のビューで埋める
     layoutView.getRegion('header').show(headerView);
     layoutView.getRegion('content').show(contactsView);
+    layoutView.getRegion('pagination').show(paginationView);
 
-    
-
+  
     this._router.navigate('contacts');
   },
 

@@ -12,6 +12,10 @@ SPA.addRegions({
 SPA.addInitializer(function(data) {
   // コレクションの初期化
   var contacts = new SPA.Collections.Contacts();
+  // Backbone.Obscuraでコレクションをプロキシーする
+  var proxy = new Backbone.Obscura(contacts);
+  // デフォルトで１ページあたりのmodelの表示量を決める
+  proxy.setPerPage(4);
 
   // ルーターの初期化
   var router = new SPA.Router();
@@ -19,7 +23,8 @@ SPA.addInitializer(function(data) {
   // コントローラーの初期化
   var controller = new SPA.Controller({
         contacts: contacts,
-        router: router,
+        proxy: proxy,
+        router: router
       });
 
 　//ルーティング処理
