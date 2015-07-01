@@ -87,3 +87,7 @@ a.thumbnail.active {
   text-align: center;
   display: block;
 }
+
+.add-contact-btn {
+  margin: 15px;
+}
