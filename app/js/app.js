@@ -15,7 +15,7 @@ SPA.addInitializer(function(data) {
   // Backbone.Obscuraでコレクションをプロキシーする
   var proxy = new Backbone.Obscura(contacts);
   // デフォルトで１ページあたりのmodelの表示量を決める
-  proxy.setPerPage(4);
+  proxy.setPerPage(8);
 
   // ルーターの初期化
   var router = new SPA.Router();
