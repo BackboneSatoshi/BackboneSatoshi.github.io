@@ -10,7 +10,32 @@
 
     <div id="base"></div>
 
-    <script type="text/template" id="search"> 
+    <!-- perpage view -->
+    <script type="text/template" id="tpl-perpage">
+      <div class="col-xs-offset-3 col-sm-offset-4 col-xs-6 col-md-offset-4 col-lg-offset-4 col-sm-4 col-md-4 col-lg-4 perpage">     
+            <div class="radio">
+                <label value="option1">
+                    <input type="radio" name="optionRadios" data-per-page="6" checked> 6 per page
+                </label>
+            </div>
+
+             <div class="radio">
+                <label value="option2">
+                    <input type="radio" name="optionRadios" data-per-page="12"> 12 per page
+                </label>
+            </div>
+
+             <div class="radio">
+                <label value="option3">
+                    <input type="radio" name="optionRadios" data-per-page="18"> 18 per page
+                </label>
+            </div>
+      </div>
+
+    </script>
+
+    <!-- search view -->
+    <script type="text/template" id="tpl-search"> 
       <div class="col-xs-offset-3 col-sm-offset-4 col-xs-6 col-md-offset-4 col-lg-offset-4 col-sm-4 col-md-4 col-lg-4">
         <form class="form-search">
           <div class="form-group">
@@ -20,7 +45,16 @@
         </form>
       </div>
     </script>
-   
+
+    <!-- controller layout view -->
+    <script type="text/template" id="tpl-controller-layout">
+      <div id="controller-search"></div>
+      <div id="controller-perpage"></div>
+    </script>
+
+  
+
+   <!-- pagination view -->
     <script type="text/template" id="tpl-pagination">
    
          <button class="btn btn-primary prev">Prev</button>
@@ -28,13 +62,14 @@
          <button class="btn btn-primary next">Next</button>    
     </script>
 
+    <!-- layout view -->
     <script type="text/template" id="tpl-layout">
       <div id="main-header"></div>
       <div id="main-controller"></div>
       <div id="main-content"></div>
       <div id="main-pagination"></div>
     </script>
-  
+
     <script type="text/template" id="tpl-content">
       <div class="container">
         <div class="row">
@@ -44,7 +79,7 @@
       </div>
     </script>
 
-
+    <! -- header view -->
     <script type="text/template" id="tpl-header">
         <header class="bs-header">
           <div class="container">
@@ -139,7 +174,9 @@
     <script src="app/js/views/contactForm.js"></script>
     <script src="app/js/views/headerView.js"></script>
     <script src="app/js/views/paginationView.js"></script>
+    <script src="app/js/views/controllerLayoutView.js"></script>
     <script src="app/js/views/searchView.js"></script>
+    <script src="app/js/views/perpageView.js"></script>
 
     <script src="app/js/controller.js"></script>
     <script src="app/js/router.js"></script>

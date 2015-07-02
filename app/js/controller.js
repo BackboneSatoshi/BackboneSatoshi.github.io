@@ -8,12 +8,22 @@ SPA.Controller = Marionette.Controller.extend({
   showContacts: function() { 
     // レイアウトビュー
     var layoutView = new SPA.Views.LayoutView();
+    // コントローラーレイアウトビュー
+    var controllerLayoutView = new SPA.Views.ControllerLayoutView();
+
+    // パーページビュー
+    var perpageView = new SPA.Views.PerpageView({
+      collection: this._proxy
+    });
+
     // サーチビュー
     var searchView = new SPA.Views.SearchView({
       collection: this._proxy
     });
+
     // ヘッダービュー
     var headerView = new SPA.Views.HeaderView();
+    // コレクションビュー
     var contactsView = new SPA.Views.Contacts({
       collection: this._proxy
     });
@@ -37,7 +47,12 @@ SPA.Controller = Marionette.Controller.extend({
     layoutView.getRegion('header').show(headerView);
     layoutView.getRegion('content').show(contactsView);
     layoutView.getRegion('pagination').show(paginationView);
-    layoutView.getRegion('controller').show(searchView);
+
+    // まずはコントローラーレイアウトビューを先に表示させる
+    layoutView.getRegion('controller').show(controllerLayoutView);
+    // コントローラーレイアウトビューのリージョンを別のビューで埋める
+    controllerLayoutView.getRegion('search').show(searchView);
+    controllerLayoutView.getRegion('perpage').show(perpageView);
 
   
     this._router.navigate('contacts');
@@ -60,7 +75,7 @@ SPA.Controller = Marionette.Controller.extend({
 
     this.listenTo(newContactForm, 'form:canceled', this.showContacts);
 
-    // まずはレイスとビューを先に表示させる
+    // まずはレイアウトビューを先に表示させる
     SPA.mainRegion.show(layoutView);
 　　// リージョンを別のビューで埋める
    layoutView.getRegion('header').show(headerView);
