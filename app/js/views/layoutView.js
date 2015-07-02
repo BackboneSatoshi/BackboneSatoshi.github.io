@@ -3,7 +3,8 @@ SPA.Views.LayoutView = Marionette.LayoutView.extend({
     regions: {
       header: "#main-header",
       content: "#main-content",
-      pagination: "#main-pagination"
+      pagination: "#main-pagination",
+      controller: "#main-controller"
     },
     onDestroy: function() {
 		console.log("LayoutViewを破棄");

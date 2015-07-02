@@ -91,3 +91,8 @@ a.thumbnail.active {
 .add-contact-btn {
   margin: 15px;
 }
+
+.form-search {
+  text-align: center;
+  margin-top: 15px;
+}

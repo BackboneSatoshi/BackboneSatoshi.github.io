@@ -8,6 +8,10 @@ SPA.Controller = Marionette.Controller.extend({
   showContacts: function() { 
     // レイアウトビュー
     var layoutView = new SPA.Views.LayoutView();
+    // サーチビュー
+    var searchView = new SPA.Views.SearchView({
+      collection: this._proxy
+    });
     // ヘッダービュー
     var headerView = new SPA.Views.HeaderView();
     var contactsView = new SPA.Views.Contacts({
@@ -33,6 +37,7 @@ SPA.Controller = Marionette.Controller.extend({
     layoutView.getRegion('header').show(headerView);
     layoutView.getRegion('content').show(contactsView);
     layoutView.getRegion('pagination').show(paginationView);
+    layoutView.getRegion('controller').show(searchView);
 
   
     this._router.navigate('contacts');
