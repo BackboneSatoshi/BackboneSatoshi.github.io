@@ -63,7 +63,7 @@ SPA.Collections.Contacts = Backbone.Collection.extend({
       },
       {
         id: 9,
-        name: '宜野座伸元(ぎのざ のぶちか)',
+        name: '宜野座伸(ぎのざ のぶちか)',
         tel: '085-2342-2342',
         email: 'ginoza@backbone.com',
         avatar: 'http://robohash.org/9?size=128x128'
