@@ -31,7 +31,8 @@ SPA.addInitializer(function(data) {
   router.processAppRoutes(controller, {
     'contacts': 'showContacts',
     'contacts/new': 'newContact',
-    'contacts/edit/:id': 'editContact'
+    'contacts/edit/:id': 'editContact',
+    'contacts/*': 'showContacts'
   });
 
  
