@@ -88,14 +88,16 @@
         </header>
     </script>
 
+    <! -- contacts view -->
     <script type="text/template" id="tpl-contacts">
-      <h2 class="page-header text-center">List of Robots</h2>
+      
       <p class="text-center">
         <a href="#contacts/new" class="btn btn-lg btn-outline add-contact-btn">Add Contact</a>
       </p>
       <ul class="media-list row contacts-container"></ul>
     </script>
 
+    <! -- contact view -->
     <script type="text/template" id="tpl-contact">
       <div class="thumbnail">
         <img class="media-object" src="<%- avatar %>">
@@ -113,6 +115,7 @@
       </div>
       <div class="media-body">
         <dl>
+          <dt>Age</dit><dd>33</dd>
           <dt>Phone Number:</dt>
           <dd><%- tel %></dd>
           <dt>Email:</dt>

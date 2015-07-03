@@ -3,6 +3,7 @@ SPA.Models.Contact = Backbone.Model.extend({
     name: null,
     tel: null,
     email: null,
-    avatar: null
+    avatar: null,
+    age: null
   }
 });
