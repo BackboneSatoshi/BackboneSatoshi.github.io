@@ -5,7 +5,7 @@ SPA.Views.PerpageView = Marionette.ItemView.extend({
 	},
 
 	changePagination: function(ev) {
-		console.log(this.$('.perpage input:checked').data('per-page'));
+		console.log("1ページあらりの表示量　" + this.$('.perpage input:checked').data('per-page'));
 
 		this.collection.setPerPage(this.$('.perpage input:checked').data('per-page'));
 	},

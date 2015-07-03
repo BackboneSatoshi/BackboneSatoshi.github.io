@@ -11,6 +11,10 @@ SPA.Controller = Marionette.Controller.extend({
     // コントローラーレイアウトビュー
     var controllerLayoutView = new SPA.Views.ControllerLayoutView();
 
+    // ソートビュー
+    var sortView = new SPA.Views.SortView({
+      collection: this._proxy
+    });
     // パーページビュー
     var perpageView = new SPA.Views.PerpageView({
       collection: this._proxy
@@ -53,6 +57,8 @@ SPA.Controller = Marionette.Controller.extend({
     // コントローラーレイアウトビューのリージョンを別のビューで埋める
     controllerLayoutView.getRegion('search').show(searchView);
     controllerLayoutView.getRegion('perpage').show(perpageView);
+    controllerLayoutView.getRegion('sort').show(sortView);
+
 
   
     this._router.navigate('contacts');

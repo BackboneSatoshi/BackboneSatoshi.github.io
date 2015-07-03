@@ -5,6 +5,7 @@ SPA.Views.SearchView = Marionette.ItemView.extend({
 		'keydown .form-search .search-input': 'filtering'
 	},
 	filtering: _.debounce(function(ev) {
+		console.log(this.$(".search-input").val() + " でフィルタリング");
 		var regex = new RegExp(this.$(".search-input").val(), 'i');
 
 		this.collection.filterBy('filter-on-type', function(model) {
