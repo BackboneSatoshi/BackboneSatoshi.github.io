@@ -4,7 +4,8 @@ SPA.Views.ContactForm = Marionette.ItemView.extend({
   ui: {
     nameInput: '.contact-name-input',
     telInput: '.contact-tel-input',
-    emailInput: '.contact-email-input'
+    emailInput: '.contact-email-input',
+    ageInput: '.contact-age-input'
   },
 
   events: {
@@ -25,6 +26,7 @@ SPA.Views.ContactForm = Marionette.ItemView.extend({
     e.preventDefault();
 
     this.trigger('form:submitted', {
+      age: this.ui.ageInput.val(),
       name: this.ui.nameInput.val(),
       tel: this.ui.telInput.val(),
       email: this.ui.emailInput.val()

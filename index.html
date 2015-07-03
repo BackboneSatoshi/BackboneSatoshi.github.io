@@ -10,56 +10,6 @@
 
     <div id="base"></div>
 
-    <!-- sort view -->
-    <script type="text/template" id="tpl-sort">
-        <div class="col-xs-offset-3 col-sm-offset-4 col-xs-6 col-md-offset-4 col-lg-offset-4 col-sm-4 col-md-4 col-lg-4 sort-by"> 
-            <p>ソート機能</p>    
-            <div class="radio">
-                <label>
-                    <input type="radio" name="sortRadios" data-key="null" data-dir="asc" checked>
-                     OFF
-                </label>
-            </div>
-
-             <div class="radio">
-                <label>
-                    <input type="radio" name="sortRadios" data-key="age" data-dir="asc"> 若いロボット順
-                </label>
-            </div>
-
-             <div class="radio">
-                <label>
-                    <input type="radio" name="sortRadios" data-key="age" data-dir="desc"> 大人のロボット順
-                </label>
-            </div>
-      </div>
-    </script>
-
-    <!-- perpage view -->
-    <script type="text/template" id="tpl-perpage">
-      <div class="col-xs-offset-3 col-sm-offset-4 col-xs-6 col-md-offset-4 col-lg-offset-4 col-sm-4 col-md-4 col-lg-4 perpage"> 
-            <p>表示量</p>    
-            <div class="radio">
-                <label value="option1">
-                    <input type="radio" name="optionRadios" data-per-page="6" checked> 6 per page
-                </label>
-            </div>
-
-             <div class="radio">
-                <label value="option2">
-                    <input type="radio" name="optionRadios" data-per-page="12"> 12 per page
-                </label>
-            </div>
-
-             <div class="radio">
-                <label value="option3">
-                    <input type="radio" name="optionRadios" data-per-page="18"> 18 per page
-                </label>
-            </div>
-      </div>
-    </script>
-
-
     <!-- search view -->
     <script type="text/template" id="tpl-search"> 
       <div class="col-xs-offset-3 col-sm-offset-4 col-xs-6 col-md-offset-4 col-lg-offset-4 col-sm-4 col-md-4 col-lg-4">
@@ -72,11 +22,68 @@
       </div>
     </script>
 
+    <!-- sort view -->
+    <script type="text/template" id="tpl-sort">
+        <div class="sort-by"> 
+            <p>ソート機能</p>    
+            <div class="radio">
+                <label>
+                    <input type="radio" name="sortRadios" data-key="null" data-dir="asc" checked>
+                     Off
+                </label>
+            </div>
+
+             <div class="radio">
+                <label>
+                    <input type="radio" name="sortRadios" data-key="age" data-dir="asc">Young
+                </label>
+            </div>
+
+             <div class="radio">
+                <label>
+                    <input type="radio" name="sortRadios" data-key="age" data-dir="desc">Old
+                </label>
+            </div>
+      </div>
+    </script>
+
+    <!-- perpage view -->
+    <script type="text/template" id="tpl-perpage">
+      <div class="perpage"> 
+            <p>表示量</p>    
+            <div class="radio">
+                <label value="option1">
+                    <input type="radio" name="optionRadios" data-per-page="6" checked>6
+                </label>
+            </div>
+
+             <div class="radio">
+                <label value="option2">
+                    <input type="radio" name="optionRadios" data-per-page="12">12
+                </label>
+            </div>
+
+             <div class="radio">
+                <label value="option3">
+                    <input type="radio" name="optionRadios" data-per-page="18">18
+                </label>
+            </div>
+      </div>
+    </script>
+
     <!-- controller layout view -->
     <script type="text/template" id="tpl-controller-layout">
       <div id="controller-search"></div>
-      <div id="controller-perpage"></div>
-      <div id="controller-sort"></div>
+      <div class="row">
+          <div class="col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4 col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="row">
+              <div id="controller-perpage" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+              </div>
+              <div id="controller-sort" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+              </div>
+            </div>
+          </div>
+      </div>
     </script>
 
    <!-- pagination view -->
@@ -114,8 +121,7 @@
     </script>
 
     <! -- contacts view -->
-    <script type="text/template" id="tpl-contacts">
-      
+    <script type="text/template" id="tpl-contacts">   
       <p class="text-center">
         <a href="#contacts/new" class="btn btn-lg btn-outline add-contact-btn">Add Contact</a>
       </p>
@@ -157,7 +163,7 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Age : </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control contact-name-input" value="<%- age %>">
+                      <input type="text" class="form-control contact-age-input" value="<%- age %>">
                     </div>
                   </div>
 
