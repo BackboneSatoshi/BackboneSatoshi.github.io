@@ -47,7 +47,7 @@ SPA.Controller = Marionette.Controller.extend({
 
     // まずはレイアウトビューを先に表示させる
     SPA.mainRegion.show(layoutView); 
-    // リージョンを別のビューで埋める
+    // レイアウトビューのリージョンを別のビューで埋める
     layoutView.getRegion('header').show(headerView);
     layoutView.getRegion('content').show(contactsView);
     layoutView.getRegion('pagination').show(paginationView);
@@ -65,27 +65,36 @@ SPA.Controller = Marionette.Controller.extend({
   },
 
   newContact: function() {
-    var layoutView = new SPA.Views.LayoutView();
-
+    // レイアウトビュー
+    var editLayoutView = new SPA.Views.EditLayoutView();
+    // モデルの初期化
+    var model = new SPA.Models.Contact()
+    // ヘッダービュー
     var headerView = new SPA.Views.HeaderView();
-
+    // フォームビュー
     var newContactForm = new SPA.Views.ContactForm({
-      model: new SPA.Models.Contact()
+      model: model
     });
+    // ライブビュー
+    var liveView = new SPA.Views.LiveView({
+      model: model
+    });
+
     // イベントリスニング
     this.listenTo(newContactForm, 'form:submitted', function(attrs) {
       attrs.avatar = 'http://robohash.org/' + _.random(1, 15) + '?size=140x140';
       this._contacts.create(attrs);
       this.showContacts();
     });
-
+    // イベント利スイング
     this.listenTo(newContactForm, 'form:canceled', this.showContacts);
 
     // まずはレイアウトビューを先に表示させる
-    SPA.mainRegion.show(layoutView);
+    SPA.mainRegion.show(editLayoutView);
 　　// リージョンを別のビューで埋める
-   layoutView.getRegion('header').show(headerView);
-   layoutView.getRegion('content').show(newContactForm);
+   editLayoutView.getRegion('header').show(headerView);
+   editLayoutView.getRegion('content').show(newContactForm);
+   editLayoutView.getRegion('live').show(liveView);
 
     this._router.navigate('contacts/new');
   },

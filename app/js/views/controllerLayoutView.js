@@ -5,8 +5,5 @@ SPA.Views.ControllerLayoutView = Marionette.LayoutView.extend({
 		search: "#controller-search",
 		perpage: "#controller-perpage",
 		sort: "#controller-sort"
-	},
-	onDestroy: function() {
-		console.log("controllerLayoutViewを破棄");
 	}
 });

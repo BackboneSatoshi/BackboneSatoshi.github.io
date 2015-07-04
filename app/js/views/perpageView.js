@@ -8,9 +8,5 @@ SPA.Views.PerpageView = Marionette.ItemView.extend({
 		console.log("1ページあらりの表示量　" + this.$('.perpage input:checked').data('per-page'));
 
 		this.collection.setPerPage(this.$('.perpage input:checked').data('per-page'));
-	},
-
-	onDestroy: function() {
-		console.log("PerpageViewを破棄");
 	}
 })

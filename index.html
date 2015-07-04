@@ -10,6 +10,48 @@
 
     <div id="base"></div>
 
+    <!-- live view -->
+    <script type="text/template" id="tpl-live">
+      <div class="col-md-offset-4 col-md-4">
+        <ul class="media-list row contacts-container">
+
+            <div class="thumbnail">
+              <img class="media-object" src="http://robohash.org/1?size=128x128">
+            </div>
+
+            <div class="media-heading">
+              <h3 name="fullname">
+                <small>
+                  <a href="#contacts/edit/"><span class="glyphicon glyphicon-pencil edit-contract"></span></a>
+                  <a href="#contacts/delete/" class="delete-contract">
+                    <span class="glyphicon glyphicon-trash"></span>
+                  </a>
+                </small>
+              </h3>
+            </div>
+
+            <div class="media-body">
+              <dl>
+                <dt>Age:</dit>
+                <dd></dd>
+                <dt>Phone Number:</dt>
+                <dd></dd>
+                <dt>Email:</dt>
+                <dd></dd>
+              </dl>
+            </div>
+     
+     　 </ul>
+      </div>
+    </script>
+
+    <!-- edit layout view -->
+    <script type="text/template" id="tpl-edit-layout">
+      <div id="main-header"></div>
+      <div id="main-content"></div>
+      <div id="main-live"></div>
+    </script>
+
     <!-- search view -->
     <script type="text/template" id="tpl-search"> 
       <div class="col-xs-offset-3 col-sm-offset-4 col-xs-6 col-md-offset-4 col-lg-offset-4 col-sm-4 col-md-4 col-lg-4">
@@ -111,7 +153,7 @@
       </div>
     </script>
 
-    <! -- header view -->
+    <!-- header view -->
     <script type="text/template" id="tpl-header">
         <header class="bs-header">
           <div class="container">
@@ -120,7 +162,7 @@
         </header>
     </script>
 
-    <! -- contacts view -->
+    <!-- contacts view -->
     <script type="text/template" id="tpl-contacts">   
       <p class="text-center">
         <a href="#contacts/new" class="btn btn-lg btn-outline add-contact-btn">Add Contact</a>
@@ -128,7 +170,7 @@
       <ul class="media-list row contacts-container"></ul>
     </script>
 
-    <! -- contact view -->
+    <!-- contact view -->
     <script type="text/template" id="tpl-contact">
       <div class="thumbnail">
         <img class="media-object" src="<%- avatar %>">
@@ -156,6 +198,7 @@
       <hr>
     </script>
 
+    <!-- new contact form view -->
     <script type="text/template" id="tpl-new-contact">
           <h2 class="page-header text-center">ロボットを<%= isNew ? '追加する' : '編集する' %></h2>
 
@@ -170,7 +213,7 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Full name:</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control contact-name-input" value="<%- name %>">
+                      <input type="text" name="fullname" class="form-control contact-name-input" value="<%- name %>">
                     </div>
                   </div>
 
@@ -223,6 +266,8 @@
     <script src="app/js/views/searchView.js"></script>
     <script src="app/js/views/perpageView.js"></script>
     <script src="app/js/views/sortView.js"></script>
+    <script src="app/js/views/editLayoutView.js"></script>
+    <script src="app/js/views/liveView.js"></script>
 
     <script src="app/js/controller.js"></script>
     <script src="app/js/router.js"></script>

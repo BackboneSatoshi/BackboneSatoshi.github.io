@@ -5,8 +5,5 @@ SPA.Views.LayoutView = Marionette.LayoutView.extend({
       controller: "#main-controller",
       content: "#main-content",
       pagination: "#main-pagination"
-    },
-    onDestroy: function() {
-		console.log("LayoutViewを破棄");
-	}
+    }
 });

@@ -1,5 +1,23 @@
 SPA.Views.ContactForm = Marionette.ItemView.extend({
   template: '#tpl-new-contact',
+  _modelBinder: undefined,
+
+  initialize: function() {
+    this._modelBinder = new Backbone.ModelBinder();
+    this._bindingOptions = {
+      "name": '[name = "fullname"]'
+    };
+  },
+
+  onClose: function() {
+    this._modelBinder.unbind();
+  },
+
+  onRender: function() {
+    var bindings = this._bindingOptions;
+
+    this._modelBinder.bind(this.model,this.el,bindings);
+  },
 
   ui: {
     nameInput: '.contact-name-input',
@@ -31,8 +49,5 @@ SPA.Views.ContactForm = Marionette.ItemView.extend({
       tel: this.ui.telInput.val(),
       email: this.ui.emailInput.val()
     });
-  },
-  onDestroy: function() {
-    console.log("ContactFormビューを破棄");
   }
 });

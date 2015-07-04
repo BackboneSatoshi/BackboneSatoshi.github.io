@@ -91,8 +91,9 @@
             }
             this._options['modelSetOptions'].changeSource = 'ModelBinder';
 
+            // keyupイベントですぐにモデル状態がビューに通知がいくように変更を加えた
             if(!this._options['changeTriggers']){
-                this._options['changeTriggers'] = {'': 'change', '[contenteditable]': 'blur'};
+                this._options['changeTriggers'] = {'': 'keyup', '[contenteditable]': 'blur'};
             }
 
             if(!this._options['initialCopyDirection']){

@@ -5,8 +5,5 @@ SPA.Views.Contact = Marionette.ItemView.extend({
   triggers: {
     'click .delete-contract': 'delete:clicked',
     'click .edit-contract': 'edit:clicked'
-  },
-  onDestroy: function() {
-		console.log("ContactViewを破棄");
-	}
+  }
 });

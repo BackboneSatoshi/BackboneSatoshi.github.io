@@ -5,8 +5,5 @@ SPA.Views.Contacts = Marionette.CompositeView.extend({
   childViewContainer: '.contacts-container',
   triggers: {
     'click .add-contact-btn': 'addContact:clicked'
-  },
-  onDestroy: function() {
-  	console.log("Contactsビューを破棄");
   }
 });
