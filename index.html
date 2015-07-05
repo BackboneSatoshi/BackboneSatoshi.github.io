@@ -12,7 +12,7 @@
 
     <!-- live view -->
     <script type="text/template" id="tpl-live">
-      <div class="col-md-offset-4 col-md-4">
+      <div class="media col-sm-offset-3 com-md-offset-3 col-lg-offset-4 col-sm-6 col-md-6 col-lg-4">
         <ul class="media-list row contacts-container">
 
             <div class="thumbnail">
@@ -20,24 +20,23 @@
             </div>
 
             <div class="media-heading">
-              <h3 name="fullname">
-                <small>
-                  <a href="#contacts/edit/"><span class="glyphicon glyphicon-pencil edit-contract"></span></a>
-                  <a href="#contacts/delete/" class="delete-contract">
-                    <span class="glyphicon glyphicon-trash"></span>
-                  </a>
-                </small>
+              <h3>
+              <span name="fullname"></span>
+              <small>
+                 <span class="glyphicon glyphicon-pencil edit-contract"></span>
+                  <span class="glyphicon glyphicon-trash"></span>
+              </small>
               </h3>
             </div>
 
             <div class="media-body">
               <dl>
                 <dt>Age:</dit>
-                <dd></dd>
+                <dd name="age"></dd>
                 <dt>Phone Number:</dt>
-                <dd></dd>
+                <dd name="phonenumber"></dd>
                 <dt>Email:</dt>
-                <dd></dd>
+                <dd name="email"></dd>
               </dl>
             </div>
      
@@ -203,12 +202,6 @@
           <h2 class="page-header text-center">ロボットを<%= isNew ? '追加する' : '編集する' %></h2>
 
           <form role="form" class="form-horizontal contract-form">
-                  <div class="form-group">
-                    <label class="col-sm-4 control-label">Age : </label>
-                    <div class="col-sm-6">
-                      <input type="text" class="form-control contact-age-input" value="<%- age %>">
-                    </div>
-                  </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Full name:</label>
@@ -218,16 +211,23 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-4 control-label">Email address:</label>
+                    <label class="col-sm-4 control-label">Age : </label>
                     <div class="col-sm-6">
-                      <input type="email" class="form-control contact-email-input" value="<%- email %>">
+                      <input type="text" name="age"  class="form-control contact-age-input" value="<%- age %>">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Telephone number:</label>
                     <div class="col-sm-6">
-                      <input type="tel" class="form-control contact-tel-input" value="<%- tel %>">
+                      <input type="tel" name="phonenumber"  class="form-control contact-tel-input" value="<%- tel %>">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-4 control-label">Email address:</label>
+                    <div class="col-sm-6">
+                      <input type="email" name="email"  class="form-control contact-email-input" value="<%- email %>">
                     </div>
                   </div>
 

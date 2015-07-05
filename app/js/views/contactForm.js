@@ -5,7 +5,10 @@ SPA.Views.ContactForm = Marionette.ItemView.extend({
   initialize: function() {
     this._modelBinder = new Backbone.ModelBinder();
     this._bindingOptions = {
-      "name": '[name = "fullname"]'
+      "name": '[name = "fullname"]',
+      "tel": '[name = "phonenumber"]',
+      "age": '[name = "age"]',
+      "email": '[name = "email"]',
     };
   },
 
