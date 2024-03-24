@@ -148,7 +148,15 @@ SPA.Collections.Contacts = Backbone.Collection.extend({
         email: 'Addy Osmani@backbone.com',
         avatar: 'http://robohash.org/18?size=128x128',
         age: 69
-      }], function(contact) {
+      },
+      {
+        id: 1,
+        name : 'Jeremy Wariner.ジェレミー・ウォリナー様',
+        tel: '111111-2222-3333',
+        email: 'ピューと吹くジャガーさん@backbone.com',
+        avatar: 'http://robohash.org/19?size=128x128',
+        age: 40?
+      },], function(contact) {
         this.create(contact);
       }, this);
   }
