@@ -38,7 +38,7 @@ images is created from RoboHash site(https://robohash.org/)
 ）
 
 行きづまりはたんぽぽの味蒲公英💃.👅.youtubeにとびまするぞー蔵.
- (   )
+( https://m.youtube.com/shorts/F1e0TmTCwB8?si=lNgme-XenZ2HdYQ3  )
 
 
 
