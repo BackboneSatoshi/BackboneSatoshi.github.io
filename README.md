@@ -37,6 +37,10 @@ images is created from RoboHash site(https://robohash.org/)
 行きずまりはフンの味です。飛びましょうここに→(https://www.youtube.com/watch?v=_Q0QIziK_mU)おそらくyoutubeに辿りつくのかも。（注意：音楽が流れるかもしれません。Road to Rebirth(曲です。)
 ）
 
+行きづまりはたんぽぽの味蒲公英💃.👅.youtubeにとびまするぞー蔵.
+ (   )
+
+
 
 使用例:サービス名:「みんなので友達の名前覚えまっしょい」.etc...
 使用例：ビジネス名：「」...etc...
