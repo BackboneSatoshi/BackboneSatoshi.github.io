@@ -44,3 +44,6 @@ images is created from RoboHash site(https://robohash.org/)
 
 使用例:サービス名:「みんなので友達の名前覚えまっしょい」.etc...
 使用例：ビジネス名：「」...etc...
+
+参考文献、参考サイト、つまづいた時：
+(最初の一歩は始めること　Jason Zimdars / 青木靖 訳)　http://www.aoky.net/articles/jason_zimdars/the_first_step_is_to_start.htm
