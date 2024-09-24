@@ -40,6 +40,10 @@ images is created from RoboHash site(https://robohash.org/)
 行きづまりはたんぽぽの味蒲公英💃.👅.youtubeにとびまするぞー蔵.
 ( https://m.youtube.com/shorts/F1e0TmTCwB8?si=lNgme-XenZ2HdYQ3  )
 
+make your of own language and music etc。。。
+
+下記のジャンプ先はyoutubeで参考になるプログラミングを勉強する際に役立つ再生リスト集ですです。w٩( 'ω' )و
+(https://www.youtube.com/playlist?list=PLD0d5HRwdV9zW8t1m91_wbL5eTbl0yOP5)
 
 
 使用例:サービス名:「みんなので友達の名前覚えまっしょい」.etc...
