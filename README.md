@@ -27,9 +27,9 @@ do.mo.satoshiです。童貞検定純1級を落ちてしまったので・・・
  (´༎ຶོρ༎ຶོ`)君
 
     余談：爆速で元気する曲群「”🦌shikaのこのこ-kosi-たんたん”」：(youtubeに飛びます)：　→ （https://www.youtube.com/watch?v=ZZvIVRQ4E7I）
-    
-    
 
+    豆知識：国の天然記念物「奈良のシカ」は、偶蹄目（ウシ目）シカ科シカ属に分類されるニホンジカです。（from wiki）
+    
 そんな君たちのためにこのサイトを昔若い時に作りました。　よかったら参考にしてねん。　I am are JavaScript master,and funny man,and teller for you.
 
 コーディング（source.reading:検索：ソースリーディングをしてみたり）を参考にしてみたり！　目の前の誰かを頼りながら、少しずつ進みましょう。！
