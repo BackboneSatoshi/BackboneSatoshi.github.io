@@ -18,11 +18,17 @@
 
 間違えた。w
 
-錨（いかり）の役割をしてくれると思います。do.mo.satoshiです。童貞検定純1級を落ちてしまったので・・・こちらがおすすめです。→（飛びます--> https://www.youtube.com/watch?v=juJiaIP0Ma4&t=46s（統計検定））、おすすめのyoutubeへのドアはこちらから🚪→（https://www.youtube.com/）からどうぞー！w）（（https://www.youtube.com/watch?v=juJiaIP0Ma4&t=46s））.
+錨（いかり）の役割をしてくれると思います。
+
+ 😭.
+do.mo.satoshiです。童貞検定純1級を落ちてしまったので・・・こちらがおすすめです。→（飛びます--> https://www.youtube.com/watch?v=juJiaIP0Ma4&t=46s（統計検定））、おすすめのyoutubeへのドアはこちらから🚪→（https://www.youtube.com/）からどうぞー！w）（（https://www.youtube.com/watch?v=juJiaIP0Ma4&t=46s））.
 笑う→（（飛びます辻本ニー＞（var 辻本　＝　"直撃浣腸男".VS.""山田花子を抱いた男"です。男(08:00)→の瞬間体のみのこなし方は完璧な防御です。）https://www.youtube.com/watch?v=Uf6IyMG9CcM　
 　:youtubeに飛びます。。(0:08です。)
-
  (´༎ຶོρ༎ຶོ`)君
+
+    余談：爆速で元気する曲群「”🦌shikaのこのこ-kosi-たんたん”」：(youtubeに飛びます)：　→ （https://www.youtube.com/watch?v=ZZvIVRQ4E7I）
+    
+    
 
 そんな君たちのためにこのサイトを昔若い時に作りました。　よかったら参考にしてねん。　I am are JavaScript master,and funny man,and teller for you.
 
